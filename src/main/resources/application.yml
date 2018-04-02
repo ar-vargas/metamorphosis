@@ -1,0 +1,7 @@
+spring:
+  kafka:
+    consumer:
+      group-id: group1
+    bootstrap-servers: localhost:9092
+    producer:
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
