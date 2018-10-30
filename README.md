@@ -1,7 +1,7 @@
 # Metamorphosis
 An usage example for Spring Kafka
 
-##Environment setup 
+## Environment setup 
 Before starting, Kafka server must be configured.
 
 Download the latest version from the official site 
@@ -19,7 +19,7 @@ After it finishes, run an instance of Kafka (similarly, `server.properties` can 
 ```bin/kafka-server-start.sh config/server.properties```
 
 
-##Running the example
+## Running the example
 Download dependencies and install jar
 
 ```mvn clean install```
