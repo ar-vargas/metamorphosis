@@ -17,8 +17,7 @@ public class KafkaConsumer {
 
     @KafkaListener(topics = "bar")
     public void listen(ConsumerRecord<String, String> consumerRecord) {
-        log.info("CONSUMING MESSAGE");
-        log.info("{}", consumerRecord.toString());
+        log.info("CONSUMING MESSAGE: {}", consumerRecord.toString());
     }
 
     @KafkaListener(
@@ -26,9 +25,9 @@ public class KafkaConsumer {
             groupId = "partitioned-group"
     )
     public void listenToPartition(ConsumerRecord<String, String> consumerRecord) {
-        log.info("CONSUMING MESSAGE FROM PARTITION 0");
-        log.info("{}", consumerRecord.toString());
+        log.info("CONSUMING MESSAGE FROM PARTITION 0: {}", consumerRecord.toString());
     }
+
 
 }
 

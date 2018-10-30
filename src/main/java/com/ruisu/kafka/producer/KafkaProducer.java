@@ -51,9 +51,9 @@ public class KafkaProducer {
         });
 
         //Send 100 messages
-        IntStream.range(0,100).forEach(value -> template.send("bar", 0, "message-with-partition","Hello World " + value));
+        IntStream.range(0,100).forEach(value -> template.sendDefault(0, "message-with-partition","Hello World " + value));
 
-        ListenableFuture<SendResult<String, String>> futureFoo = template.send("bar", "message-without-partition","Future Message");
+        ListenableFuture<SendResult<String, String>> futureFoo = template.sendDefault("message-without-partition","Future Message");
 
         //Add a callback to the specific ProducerRecord.
 
